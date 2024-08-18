@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head style="background-color: hsl(194, 86%, 69%);>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel</title>
@@ -8,7 +8,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: hsl(194, 48%, 47%);">
     <!-- Incluye el menú de navegación -->
     @include('partials.navbar')
 

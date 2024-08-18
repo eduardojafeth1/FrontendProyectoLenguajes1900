@@ -38,7 +38,6 @@ class InitController extends Controller
                     'email' => $email,
                     'contrasena' => $contrasena,
                     'tipo' => $tipo,
-                    'clienteRegistrado' => true
                 ],
             ]);
             if ($response->getStatusCode() == 200) {
