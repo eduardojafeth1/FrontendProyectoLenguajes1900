@@ -23,12 +23,15 @@ Route::get('/', function () {
 });
 
 //LogIn, Registro y Crear Cliente
-Route::get('/init/login', [InitController::class, 'login'])->name('login');
-Route::get('/init/registro', [InitController::class, 'registro'])->name('registro');
-Route::post('/api/crear-cliente', [InitController::class, 'crearCliente'])->name('crearCliente');
+Route::get('/hotel/login', [InitController::class, 'login'])->name('login');
+Route::get('/hotel/registro', [InitController::class, 'registro'])->name('registro');
 
-
+Route::post('/hotel/cliente/crear', [InitController::class, 'crearCliente'])->name('crearCliente');
+Route::get('/hotel/cliente/todos', [InitController::class, 'obtenerClientes'])->name('obtenerTodos');
+Route::get('/hotel/cliente/editar/{dni}', [InitController::class, 'editarCliente'])->name('editarCliente');
+Route::post('/hotel/cliente/actualizar/{dni}', [InitController::class, 'actualizarCliente'])->name('actualizarCliente');
 //Reserva
+Route::get('/hotel/crear/vista', [ReservaController::class, 'vistaReserva'])->name('vistaReserva');
 Route::post('/hotel/crear/reserva', [ReservaController::class, 'crearReserva'])->name('crearReserva');
 Route::get('/hotel/editar/reserva/{cdg_reserva}', [ReservaController::class, 'editarReserva'])->name('editarReserva'); //editar reserva
 Route::post('/hotel/actualizar/reserva/{cdg_reserva}', [ReservaController::class, 'actualizarReserva'])->name('actualizarReserva'); //actualizar reserva

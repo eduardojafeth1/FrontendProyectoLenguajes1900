@@ -38,7 +38,7 @@
                     
                     <div class="input-group mb-3">
                         <input type="submit" value="Actualizar" class="btn btn-primary rounded-pill w-100 m-3">
-                        <a href="{{ route('crearReserva') }}" class="btn btn-outline-primary rounded-pill w-100 mx-3">Volver</a>
+                        <a href="{{ route('reservaAll') }}" class="btn btn-outline-primary rounded-pill w-100 mx-3">Volver</a>
                     </div>
                 </form>
             </div>

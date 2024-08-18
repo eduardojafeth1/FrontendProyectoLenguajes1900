@@ -11,12 +11,12 @@ class ReservaController extends Controller
     {
         return view('login');
     }
-
-    public function registro()
+*/
+    public function vistaReserva()
     {
-        return view('registro');
+        return view('reservaCrear');
     }
-    */
+
 
     public function obtenerReservas(){
         try{
@@ -30,6 +30,7 @@ class ReservaController extends Controller
             return $ex;
         }
     }
+
 
 
     public function crearReserva(Request $request)

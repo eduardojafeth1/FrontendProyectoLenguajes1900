@@ -27,11 +27,10 @@
                 <div class="input-group mb-3">
                     <input type="text" name="tipo" placeholder="tipo" class="form-control rounded-pill mx-3">
                 </div>
-                <div class="input-group mb-3">
-                    <input type="submit" value="Registrarse" class="btn btn-primary rounded-pill w-100 mx-3">
-                </div>
-                <div class="input-group mb-3">
-                    <a href="{{ route('login') }}" class="text-center mx-auto">Iniciar Sesion</a>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary rounded-pill"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <input type="submit" value="Guardar Cliente" class="btn btn-primary rounded-pill">
                 </div>
             </form>
         </div>
