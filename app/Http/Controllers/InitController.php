@@ -113,4 +113,37 @@ class InitController extends Controller
         }
     }
 
+    //Eliminar Cliente
+    public function verEliminarCliente($dni)
+    {
+        $client = new Client();
+        try {
+            $response = $client->request('GET', 'http://localhost:8080/usuarios/ver/' . $dni);
+            $cliente =  json_decode($response->getBody(), true);
+            if ($response->getStatusCode() == 200) {
+                return view('clientesEliminar', ['cliente' => $cliente]);
+            }
+        } catch (\Exception $ex) {
+            return "Error al eliminar cliente " . $ex;
+        }
+    }
+
+    
+    public function eliminarCliente($dni)
+    {
+        $client = new Client();
+        try {
+            $response = $client->delete('http://localhost:8080/usuarios/borrar/' . $dni);
+
+            if ($response->getStatusCode() == 200) {
+                return "Usuario Eliminado". redirect()->route('obtenerTodos');
+            }
+        } catch (\Exception $ex) {
+            return "Error al eliminar avion " . $ex;
+        }
+    }
+
+
+
+
 }

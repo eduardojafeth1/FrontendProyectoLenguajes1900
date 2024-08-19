@@ -28,6 +28,9 @@
                     <a class="nav-link" href="{{ route('login') }}">Login</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('nuevaHabitacion') }}">crearHabitacion</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('vistaReserva') }}">CrearReserva</a>
                 </li>
                 

@@ -30,6 +30,19 @@ Route::post('/hotel/cliente/crear', [InitController::class, 'crearCliente'])->na
 Route::get('/hotel/cliente/todos', [InitController::class, 'obtenerClientes'])->name('obtenerTodos');
 Route::get('/hotel/cliente/editar/{dni}', [InitController::class, 'editarCliente'])->name('editarCliente');
 Route::post('/hotel/cliente/actualizar/{dni}', [InitController::class, 'actualizarCliente'])->name('actualizarCliente');
+Route::get('/hotel/eliminar/{dni}', [InitController::class, 'verEliminarCliente'])->name('verEliminarCliente');
+Route::get('/hotel/eliminar/confirmar/{dni}', [InitController::class, 'eliminarCliente'])->name('eliminarCliente');
+
+//Habitacion servicios
+Route::get('/hotel/habitacion/nueva', [HabitacionController::class, 'habitacion'])->name('nuevaHabitacion');
+Route::post('/hotel/habitacion/crear', [HabitacionController::class, 'crearHabitacion'])->name('crearHabitacion');
+Route::get('/hotel/habitacion/todos', [HabitacionController::class, 'obtenerHabitaciones'])->name('obtenerTodosHabitaciones');
+Route::get('/hotel/habitacion/editar/{id}', [HabitacionController::class, 'editarHabitacion'])->name('editarHabitacion');
+Route::post('/hotel/habitacion/actualizar/{id}', [HabitacionController::class, 'actualizarHabitacion'])->name('actualizarHabitacion');
+Route::get('/hotel/habitacion/{id}', [HabitacionController::class, 'verEliminarHabitacion'])->name('verEliminarHabitacion');
+Route::get('/hotel/habitacion/confirmar/{id}', [HabitacionController::class, 'eliminarHabitacion'])->name('eliminarHabitacion');
+
+
 //Reserva
 Route::get('/hotel/crear/vista', [ReservaController::class, 'vistaReserva'])->name('vistaReserva');
 Route::post('/hotel/crear/reserva', [ReservaController::class, 'crearReserva'])->name('crearReserva');

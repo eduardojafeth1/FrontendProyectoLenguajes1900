@@ -30,7 +30,7 @@
                                 <td>
                                     <a href="{{ route('editarCliente', ['dni' => $cliente['dni']]) }}"
                                         class="btn rounded-pill btn-outline-primary">Editar</a>
-                                    <a href=""
+                                    <a href="{{ route('verEliminarCliente', ['dni' => $cliente['dni']]) }}"
                                         class="btn rounded-pill btn-danger">Eliminar</a>
                                 </td>
                             </tr>
@@ -39,8 +39,8 @@
                 </table>
             </div>
             <div class="text-center my-4">
-                <a href="#" class="btn btn-lg btn-primary rounded-pill" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">Hacer Reserva</a>
+                <a href="{{ route('registro') }}"
+                    class="btn rounded-pill btn-outline-primary">Nuevo Cliente</a>
             </div>
         @else
             <h2 class="text-center my-5">No hay registros</h2>
