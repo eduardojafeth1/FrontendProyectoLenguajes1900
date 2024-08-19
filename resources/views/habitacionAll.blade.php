@@ -24,8 +24,8 @@
                                 <td>{{ $habitacion['piso'] }}</td>
                                 <td>{{ $habitacion['precio_noche'] }}</td>
                                 <td>{{ $habitacion['descripcion'] }}</td>
-                                <td>{{ $habitacion['tipo'] }}</td>
-                                <td>{{ $habitacion['estado'] }}</td>
+                                <td>{{ $habitacion['tipoHabitacion']['tipo'] }}</td>
+                                <td>{{ $habitacion['estadoHabitacion']['estado'] }}</td>
                                 <td>
                                     <a href="{{ route('editarHabitacion', ['id' => $habitacion['id']]) }}"
                                         class="btn rounded-pill btn-outline-primary">Editar</a>
