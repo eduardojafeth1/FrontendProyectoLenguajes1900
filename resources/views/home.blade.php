@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div style="background-color: hsla(194, 73%, 74%, 0.897); padding: 20px " class="text-center">
+    <div style="background-color: hsla(194, 93%, 77%, 0); padding: 20px " class="text-center">
         <h1 class="mb-4">Misión, Visión y Objetivos del Hotel</h1>
 
         <div class="mb-4">

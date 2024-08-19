@@ -7,28 +7,30 @@
             <form action="{{route('crearCliente')}}" method="POST">
                 @csrf
                 <div class="input-group mb-3">
-                    <input type="text" name="nombre" placeholder="Nombre" class="form-control rounded-pill mx-3">
+                    <input type="text" name="dni" placeholder="dni" class="form-control rounded-pill mx-3">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" name="correo" placeholder="CorreoElectronico" class="form-control rounded-pill mx-3">
+                    <input type="text" name="nombre" placeholder="nombre" class="form-control rounded-pill mx-3">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" name="telefono" placeholder="Telefono" class="form-control rounded-pill mx-3">
+                    <input type="text" name="apellido" placeholder="apellido" class="form-control rounded-pill mx-3">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" name="direccion" placeholder="Direccion" class="form-control rounded-pill mx-3">
+                    <input type="text" name="email" placeholder="email" class="form-control rounded-pill mx-3">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" name="nacionalidad" placeholder="Nacionalidad" class="form-control rounded-pill mx-3">
+                    <input type="text" name="telefono" placeholder="telefono" class="form-control rounded-pill mx-3">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="text" name="pasaporte" placeholder="Pasaporte" class="form-control rounded-pill mx-3">
+                    <input type="text" name="contrasena" placeholder="contrasena" class="form-control rounded-pill mx-3">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="submit" value="Registrarse" class="btn btn-primary rounded-pill w-100 mx-3">
+                    <input type="text" name="tipo" placeholder="tipo" class="form-control rounded-pill mx-3">
                 </div>
-                <div class="input-group mb-3">
-                    <a href="{{ route('login') }}" class="text-center mx-auto">Iniciar Sesion</a>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary rounded-pill"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <input type="submit" value="Guardar Cliente" class="btn btn-primary rounded-pill">
                 </div>
             </form>
         </div>
